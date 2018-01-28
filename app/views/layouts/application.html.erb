@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>フリー小説投稿サイト-Novels-</h1>
+      <p1>こちらでは、無料で小説の投稿や小説が読めちゃう！！</p1>
+    </div>
+
+     <div id="mainArea">
+       <div id="headerlink">
+         <nav>
+           <% if user_signed_in? %>
+              <strong><%= "-ようこそ、" + current_user.name + "さん-"  %></strong>
+                <%= link_to 'Profile' , current_user , id: 'link' %>
+                <%= link_to 'Profile changes' , edit_user_registration_path , id: 'link' %>
+                <%= link_to 'Log out' , destroy_user_session_path ,  method: :delete %>
+            <% else %>
+               <strong><%= "-ようこそ、ゲストさん-"  %></strong>
+                <%= link_to 'Sign up' , new_user_registration_path , id: 'link' %>
+                <%= link_to 'Log in' , new_user_session_path  %>
+            <% end %>
+         </nav>
+       </div>
+
+       <div class="container">
+         <%= link_to image_tag('book.png' , class: 'book') , root_path %>
+       </div>
+       <div class="container">
+        <%= yield %>
+       </div>
+     </div>
+
+     <div id="menuBar">
+      <ul>
+        <div id="button">
+          <p2>ジャンル</p2>
+          <%= button_to 'ファンタジー' , '#' %>
+          <%= button_to '      バトル      ' , '#' %>
+          <%= button_to '　　 S F 　　' , '#' %>
+          <%= button_to '      ホラー      ' , '#' %>
+          <%= button_to '  ミステリー  ' , '#' %>
+          <%= button_to '       恋  愛       ' , '#' %>
+          <%= button_to '      その他      ' , '#' %>
+        </div>
+      </ul>
+     </div>
+
+ </body>
+</html>
