@@ -1,5 +1,8 @@
-
 <%= form_for @contribution do |f| %>
+
+  <%= f.label :"ジャンル" %><br>
+  <%= f.collection_select :option_id, Option.all, :id, :category %>
+
     <p>
         <%= f.text_field :title , placeholder: '小説タイトル' %>
         <% if @contribution.errors.messages[:title].any? %>

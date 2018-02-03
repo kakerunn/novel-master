@@ -5,6 +5,6 @@ class Contribution < ApplicationRecord
    #validates :option_id , presence: true
 
    belongs_to :user
-   belongs_to :option
+   belongs_to :option , optional: true
 
 end

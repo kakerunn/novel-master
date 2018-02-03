@@ -44,7 +44,7 @@ class ContributionsController < ApplicationController
 
     private
         def contribution_params
-            params.require(:contribution).permit(:title , :body).merge(user_id: current_user.id , option_id: Option.find(1).contributions)
+            params.require(:contribution).permit(:title , :body , :option_id).merge(user_id: current_user.id)
         end
 
 end
