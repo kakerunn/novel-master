@@ -5,5 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name,  presence: true, length: { maximum: 10 }
-  
+
+  has_many :contributions 
+
 end
