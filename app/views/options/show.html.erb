@@ -1,0 +1,7 @@
+<ul>
+  <% @options.contributions.each do |contribution| %>
+    <li>
+      <%= link_to contribution.title , contribution_path(contribution) %>
+    </li>
+  <% end %>
+</ul>
