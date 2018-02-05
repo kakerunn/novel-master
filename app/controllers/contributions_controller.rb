@@ -2,10 +2,12 @@ class ContributionsController < ApplicationController
 
     def index
         @contributions = Contribution.all.order(created_at: 'desc' )
+
     end
 
     def show
         @contribution = Contribution.find(params[:id])
+        @user = User.find_by(id: @contribution.user_id)
     end
 
     def new

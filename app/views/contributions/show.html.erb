@@ -1,2 +1,4 @@
-<h2><%= @contribution.title %></h2>
+<h2><%= @contribution.title %>
+<%= link_to @contribution.user.name , user_path %>
+</h2>
 <p><%= simple_format @contribution.body %></p>
