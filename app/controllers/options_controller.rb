@@ -1,7 +1,7 @@
 class OptionsController < ApplicationController
 
   def show
-    @option = Option.find_by(id: @contribution.option_id)
+    @option = Option.find(params[:id])
   end
 
 end
