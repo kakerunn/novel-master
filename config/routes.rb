@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'another/show'
+
+  get 'love/show'
+
+  get 'mystery/show'
+
+  get 'horror/show'
+
+  get 'scifi/show'
+
+  get 'battle/show'
+
+  get 'fantasy/show'
+
   get 'users/show'
 
   devise_for :users, :controllers => {

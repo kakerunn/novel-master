@@ -3,10 +3,25 @@
   <aside class="col-md-4">
     <section>
 
-      <h2><%= @user.name %>の投稿<h2>
+      <% if user_signed_in? %>
+        <h2><%= @user.name %>の投稿</h2>
+      <% else %>
+        <h2><%= @user.name %>さんの投稿</h2>
+      <% end %>
+
         <ul>
           <% @user.contributions.each do |c| %>
-            <li><%= c.title %></li>
+            <li>
+              <%= link_to c.title , contribution_path(c) %>
+                <% if user_signed_in? %>
+                  <%= link_to '[Edit]' , edit_contribution_path(c) , class: 'command' %>
+                  <%= link_to '[Delete]' ,
+                  contribution_path(c) ,
+                  method: :delete ,
+                  class: 'command' ,
+                  data: { confirm: 'Sure?' } %>
+                <% end %>
+            </li>
           <% end %>
         </ul>
 

@@ -45,13 +45,13 @@
        <ul>
         <div id="button">
           <p2>ジャンル</p2>
-          <%= button_to 'ファンタジー' , option_path(:@option) , method: :get %>
-          <%= button_to '      バトル      ' , '#' %>
-          <%= button_to '　　 S F 　　' , '#' %>
-          <%= button_to '      ホラー      ' , '#' %>
-          <%= button_to '  ミステリー  ' , '#' %>
-          <%= button_to '       恋  愛       ' , '#' %>
-          <%= button_to '      その他      ' , '#' %>
+          <%= button_to 'ファンタジー' , fantasy_show_path , method: :get  %>
+          <%= button_to '      バトル      ' , battle_show_path , method: :get %>
+          <%= button_to '　　 S F 　　' , scifi_show_path , method: :get %>
+          <%= button_to '      ホラー      ' , horror_show_path , method: :get %>
+          <%= button_to '  ミステリー  ' , mystery_show_path , method: :get %>
+          <%= button_to '       恋  愛       ' , love_show_path , method: :get %>
+          <%= button_to '      その他      ' , another_show_path , method: :get %>
         </div>
         </ul>
      </div>

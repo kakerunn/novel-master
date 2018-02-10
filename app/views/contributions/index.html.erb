@@ -7,14 +7,6 @@
     <% @contributions.each do |contribution| %>
     <li>
         <%= link_to contribution.title , contribution_path(contribution) %>
-      <% if user_signed_in? %>
-        <%= link_to '[Edit]' , edit_contribution_path(contribution) , class: 'command' %>
-        <%= link_to '[Delete]' ,
-        contribution_path(contribution) ,
-        method: :delete ,
-        class: 'command' ,
-        data: { confirm: 'Sure?' } %>
-      <% end %>
     </li>
     <% end %>
 </ul>
