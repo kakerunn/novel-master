@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.scss" media="screen and (min-width:1921px)">
+    <link rel="stylesheet" href="style.scss" media="screen and (min-width:1366px) and (max-width:1920px)">
+    <link rel="stylesheet" href="style.scss" media="screen and (min-width:768px) and (max-width:1365px)">
+    <link rel="stylesheet" href="style.scss" media="screen and (min-width:360px) and (max-width:767px)">
+    <link rel="stylesheet" href="style.scss" media="screen and (min-width:359px)">
+
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
