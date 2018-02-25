@@ -1,29 +1,29 @@
 @media screen and (min-width:1921px) {
-  #mainArea {
-    width: 80%;
+  html {
+    width: 1291px;
   }
 }
 
 @media screen and (min-width:1366px) and ( max-width:1920px) {
-  #mainArea {
-    width: 80%;
+  html {
+    width: 1366px;
   }
 }
 
 @media screen and (min-width:768px) and ( max-width:1366px) {
-  #mainArea {
-    width: 80%;
+  html {
+    width: 768px;
   }
 }
 
 @media screen and (min-width:360px) and ( max-width:768px) {
-  #mainArea {
-    width: 80%;
+  html {
+    width: 360px;
   }
 }
 
 @media screen and (max-width:360px) {
-  #mainArea {
-    width: 80%;
+  html {
+    width: 359px;
   }
 }
