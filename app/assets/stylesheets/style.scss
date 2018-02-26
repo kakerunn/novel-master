@@ -1,29 +1,12 @@
-@media screen and (min-width:1921px) {
+@media screen and (min-width:770px) {
   html {
-    width: 1291px;
+    width: 770px;
   }
 }
 
-@media screen and (min-width:1366px) and ( max-width:1920px) {
-  html {
-    width: 1366px;
-  }
-}
 
-@media screen and (min-width:768px) and ( max-width:1366px) {
+@media screen and (min-width:320px) and (max-width:620px) {
   html {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width:360px) and ( max-width:768px) {
-  html {
-    width: 360px;
-  }
-}
-
-@media screen and (max-width:360px) {
-  html {
-    width: 359px;
+    width: 320px;
   }
 }
