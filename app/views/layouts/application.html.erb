@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta name="viewport" content="width=360,initial-scale=1">
-    <link rel="stylesheet" href="style.scss" media="screen and (min-width:770px)">
-    <link rel="stylesheet" href="style.scss" media="screen and (min-width:320px) and (max-width:620px)">
+    <link rel="stylesheet" href="application.scss" media="screen and (min-width:1440px)">
+    <link rel="stylesheet" href="application.scss" media="screen and (min-width:1024px) and (max-width:1439px)">
+    <link rel="stylesheet" href="application.scss" media="screen and (min-width:768px) and (max-width:1023px)">
+    <link rel="stylesheet" href="application.scss" media="screen and (min-width:320px) and (max-width:767px)">
 
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
@@ -18,7 +20,6 @@
   <body>
     <div id="header">
       <h1>フリー小説投稿サイト-Novels-</h1>
-      <p1>こちらでは、無料で小説の投稿や小説が読めちゃう！！</p1>
     </div>
 
      <div id="mainArea">

@@ -1,6 +1,100 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin button_sizing  {
+  display: inline-block;
+    padding: 1em 1em;
+    text-decoration: none;
+    background: #333333;/*ボタン色*/
+    color: #333333;/*ボタン色に同じ*/
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #000000;
+    border-radius: 5px;/*角の丸み*/
+    font-weight: bold;
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 2px 2px rgba(0, 0, 0, 0.38);
+ }
+
+@media screen and (min-width:1440px) {
+  #header {
+    width: 100%;
+  }
+  #headerlink {
+   float: right;
+   margin-right: 100px;
+   margin-top: 20px;
+  }
+  #mainArea {
+    width: 86%;
+  }
+  h1 {
+    font-size: 25px;
+    margin-left: 50px;
+  }
+  #button {
+  @include button_sizing;
+  }
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px) {
+  #header {
+    width: 100%;
+  }
+  #headerlink {
+   float: right;
+   margin-right: 80px;
+  }
+  #mainArea {
+    width: 81%;
+  }
+  h1 {
+    font-size: 25px;
+    margin-left: 50px;
+  }
+  #button {
+  @include button_sizing;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  #header {
+    width: 100%;
+  }
+  #headerlink {
+    margin-bottom: 10px;
+  }
+  #mainArea {
+    width: 74%;
+  }
+  h1 {
+    font-size: 25px;
+    margin-left: 50px;
+  }
+  #button {
+  @include button_sizing;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+  #header {
+    width: 100%;
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+   #menuBar ul {
+    float:left;
+  }
+
+
+}
+
+
+
+
+
+
+
 #header {
  background: #333333;
  color: #DDDDDD;
@@ -8,11 +102,6 @@
  height: 65px;
 }
 
-h1 {
- float: left;
- font-size: 25px;
- margin-left: 50px;
-}
 
 h2 {
      position:top;
@@ -44,7 +133,6 @@ strong {
 
 #mainArea {
  margin-top: 10px;
- width: 1290px;
  float: right;
 }
 
@@ -52,31 +140,9 @@ strong {
  float: left;
 }
 
-#headerlink {
- float: right;
- margin-right: 100px;
- margin-top: 20px;
-}
-
-
  .container {
      width: auto;
      margin-right: 100px;
-     margin-left: 50px;
- }
-
- #button {
-  display: inline-block;
-    padding: 1em 1em;
-    text-decoration: none;
-    background: #333333;/*ボタン色*/
-    color: #333333;/*ボタン色に同じ*/
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px #000000;
-    border-radius: 5px;/*角の丸み*/
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 2px 2px rgba(0, 0, 0, 0.38);
  }
 
  #button:active{/*ボタンを押したとき*/
