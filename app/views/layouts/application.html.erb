@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="application.scss" media="screen and (min-width:1440px)">
     <link rel="stylesheet" href="application.scss" media="screen and (min-width:1024px) and (max-width:1439px)">
     <link rel="stylesheet" href="application.scss" media="screen and (min-width:768px) and (max-width:1023px)">
-    <link rel="stylesheet" href="application.scss" media="screen and (min-width:320px) and (max-width:767px)">
+    <link rel="stylesheet" href="application.scss" media="screen and (min-width:375px) and (max-width:767px)">
+    <link rel="stylesheet" href="application.scss" media="screen and (min-width:320px) and (max-width:374px)">
 
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
@@ -50,12 +51,12 @@
        <ul>
         <div id="button">
           <p2>ジャンル</p2>
-          <%= button_to 'ファンタジー' , fantasy_show_path , method: :get  %>
-          <%= button_to '      バトル      ' , battle_show_path , method: :get %>
-          <%= button_to '　　 S F 　　' , scifi_show_path , method: :get %>
-          <%= button_to '      ホラー      ' , horror_show_path , method: :get %>
-          <%= button_to '  ミステリー  ' , mystery_show_path , method: :get %>
-          <%= button_to '       恋  愛       ' , love_show_path , method: :get %>
+          <li><%= button_to 'ファンタジー' , fantasy_show_path , method: :get  %></li>
+          <li><%= button_to '      バトル      ' , battle_show_path , method: :get %></li>
+          <li><%= button_to '　　 S F 　　' , scifi_show_path , method: :get %></li>
+          <li><%= button_to '      ホラー      ' , horror_show_path , method: :get %></li>
+          <li><%= button_to '  ミステリー  ' , mystery_show_path , method: :get %></li>
+          <li><%= button_to '       恋  愛       ' , love_show_path , method: :get %></li>
           <%= button_to '      その他      ' , another_show_path , method: :get %>
         </div>
         </ul>
