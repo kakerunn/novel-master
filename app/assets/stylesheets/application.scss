@@ -19,11 +19,12 @@
     width: 100%;
   }
   #headerlink {
-   float: right;
    margin-right: 100px;
    margin-top: 20px;
   }
   #mainArea {
+    margin-top: 10px;
+    float: right;
     width: 86%;
   }
   h1 {
@@ -32,6 +33,14 @@
   }
   #button {
   @include button_sizing;
+  }
+  .book {
+      width: 375px;
+      height: 123px;
+  }
+  .container {
+      width: auto;
+      margin-right: 100px;
   }
 }
 
@@ -44,6 +53,8 @@
    margin-right: 80px;
   }
   #mainArea {
+    margin-top: 10px;
+    float: right;
     width: 81%;
   }
   h1 {
@@ -52,6 +63,14 @@
   }
   #button {
   @include button_sizing;
+  }
+  .book {
+      width: 375px;
+      height: 123px;
+  }
+  .container {
+      width: auto;
+      margin-right: 100px;
   }
 }
 
@@ -63,6 +82,8 @@
     margin-bottom: 10px;
   }
   #mainArea {
+    margin-top: 10px;
+    float: right;
     width: 74%;
   }
   h1 {
@@ -72,22 +93,46 @@
   #button {
   @include button_sizing;
   }
+  .book {
+      width: 375px;
+      height: 123px;
+  }
+  .container {
+      width: auto;
+      margin-right: 100px;
+  }
 }
 
 @media screen and (min-width:320px) and (max-width:767px) {
   #header {
+    position:relative;
     width: 100%;
+  }
+  #headerlink {
+    width: 320px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  #mainArea {
+    margin-top: 290px;
   }
   h1 {
     font-size: 20px;
     margin-left: 15px;
   }
-   #menuBar ul {
-    float:left;
+  #menuBar  {
+    position: absolute;
+     top: 66px;
   }
-
-
+  .container {
+    margin-right: 15px;
+  }
+  .book {
+      width: 300px;
+      height: 123px;
+  }
 }
+
 
 
 
@@ -127,23 +172,14 @@ p2 {
 }
 
 strong {
-  padding-right: 150px;
+  padding-right: 80px;
   font-size: 20px;
 }
 
-#mainArea {
- margin-top: 10px;
- float: right;
-}
 
 #menuBar {
  float: left;
 }
-
- .container {
-     width: auto;
-     margin-right: 100px;
- }
 
  #button:active{/*ボタンを押したとき*/
     -ms-transform: translateY(4px);
@@ -160,10 +196,6 @@ strong {
      font-size: 14px;
  }
 
- .book {
-     width: 375px;
-     height: 123px;
- }
 
  .header_menu {
      font-size: 18px;
