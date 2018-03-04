@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= analytics_init if Rails.env.production? %>
     <meta name="viewport" content="width=360,initial-scale=1">
     <link rel="stylesheet" href="application.scss" media="screen and (min-width:1440px)">
     <link rel="stylesheet" href="application.scss" media="screen and (min-width:1024px) and (max-width:1439px)">
