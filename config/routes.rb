@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'contact/index'
+
   get 'another/show'
 
   get 'love/show'
@@ -14,6 +16,10 @@ Rails.application.routes.draw do
   get 'fantasy/show'
 
   get 'users/show'
+
+  get 'contact' => 'contact#index'
+  post 'contact/confirm' => 'contact#confirm'
+  post 'contact/thanks' => 'contact#thanks'
 
   devise_for :users, :controllers => {
     :registrations => "registrations"

@@ -18,6 +18,11 @@
   #header {
     width: 100%;
   }
+  #footer {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+  }
   #headerlink {
    float: right;
    margin: 20px 100px 0 0;
@@ -47,6 +52,11 @@
 @media screen and (min-width:1024px) and (max-width:1439px) {
   #header {
     width: 100%;
+  }
+  #footer {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
   }
   #headerlink {
    float: right;
@@ -78,6 +88,11 @@
   #header {
     width: 100%;
   }
+  #footer {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+  }
   #headerlink {
     margin-bottom: 10px;
   }
@@ -107,6 +122,10 @@
   #header {
     position:relative;
     width: 100%;
+  }
+  #footer {
+    position: absolute;
+    right: 50px;
   }
   #headerlink {
     width: 320px;
@@ -150,6 +169,10 @@
   #header {
     position:relative;
     width: 100%;
+  }
+  #footer {
+    position: absolute;
+    right: 50px;
   }
   #headerlink {
     width: 320px;
@@ -234,6 +257,10 @@ strong {
 
 #menuBar {
  float: left;
+}
+
+#help {
+  width: 700px;
 }
 
  #button:active{/*ボタンを押したとき*/
