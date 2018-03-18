@@ -40,6 +40,14 @@ gem 'google-analytics-rails'
 gem 'carrierwave'
 gem 'rmagick'
 
+<<<<<<< HEAD
+=======
+group :development do
+  gem 'letter_opener' # 追加
+  gem 'letter_opener_web' # 追加
+end
+
+>>>>>>> develop
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

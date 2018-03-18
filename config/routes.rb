@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+  get 'contact/index'
+
+>>>>>>> develop
   get 'another/show'
 
   get 'love/show'
@@ -15,6 +20,17 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
+<<<<<<< HEAD
+=======
+  get 'contact' => 'contact#index'
+  post 'contact/confirm' => 'contact#confirm'
+  post 'contact/thanks' => 'contact#thanks'
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
+
+>>>>>>> develop
   devise_for :users, :controllers => {
     :registrations => "registrations"
   }

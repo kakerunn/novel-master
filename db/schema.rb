@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180312064631) do
+=======
+ActiveRecord::Schema.define(version: 20180313083645) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+>>>>>>> develop
 
   create_table "contributions", force: :cascade do |t|
     t.string "title"
