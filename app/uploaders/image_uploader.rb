@@ -34,7 +34,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
  # # 拡張子が同じでないとGIFをJPGとかにコンバートできないので、ファイル名を変更
-<<<<<<< HEAD
  #  def filename
  #    super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
  #  end
@@ -46,7 +45,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
   #   name.downcase
   # end
-=======
  # def filename
  #   super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
  # end
@@ -58,7 +56,6 @@ class ImageUploader < CarrierWave::Uploader::Base
  #    name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
  #    name.downcase
  #  end
->>>>>>> develop
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
