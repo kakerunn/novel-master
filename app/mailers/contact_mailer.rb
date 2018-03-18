@@ -1,6 +1,6 @@
 class ContactMailer < ActionMailer::Base
-  default from: "送信元アドレス"
-  default to: "送信先アドレス"
+  default from: @contact.email 
+  default to: "04kakerusiina17@gmail.com"
 
   def received_email(contact)
     @contact = contact

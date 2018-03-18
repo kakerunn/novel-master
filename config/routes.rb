@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   post 'contact/confirm' => 'contact#confirm'
   post 'contact/thanks' => 'contact#thanks'
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
+
   devise_for :users, :controllers => {
     :registrations => "registrations"
   }

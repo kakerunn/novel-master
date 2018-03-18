@@ -21,7 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :resize_to_limit => [400, 400]
 
   # 保存形式をJPGにする
-  process :convert => 'jpg'
+  # process :convert => 'jpg'
 
   # サムネイルを生成する設定
   version :thumb do
@@ -33,18 +33,18 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
- # 拡張子が同じでないとGIFをJPGとかにコンバートできないので、ファイル名を変更
-  def filename
-    super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
-  end
+ # # 拡張子が同じでないとGIFをJPGとかにコンバートできないので、ファイル名を変更
+ # def filename
+ #   super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
+ # end
 
  # ファイル名は日本語が入ってくると嫌なので、下記のようにしてみてもいい。
  # 日付(20131001.jpgみたいなファイル名)で保存する
-  def filename
-    time = Time.now
-    name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
-    name.downcase
-  end
+ #  def filename
+ #    time = Time.now
+ #    name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
+ #    name.downcase
+ #  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
