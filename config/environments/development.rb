@@ -27,7 +27,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = true
 
@@ -43,7 +43,7 @@ Rails.application.configure do
     domain: 'smtp.gmail.com',
     authentication: 'plain',
     user_name: '04kakerusiina17@gmail.com',
-    password: '0417kakeru'
+    password: '417kakeru'
   }
 
   # Print deprecation notices to the Rails logger.

@@ -83,23 +83,23 @@ Rails.application.configure do
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.logge    = ActiveSupport::TaggedLogging.new(logger)
   end
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   GA.tracker = "UA-115071122-1"
 
-  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
-    port:                 587,
-    address:              'smtp.gmail.com',
-    domain:               'gmail.com',
-    user_name:            '04kakerusiina17@gmail.com',
-    password:             '0417kakeru',
-    authentication:       'login',
-    enable_starttls_auto: true
+    enable_starttls_auto:  true,
+    address: 'smtp.gmail.com',
+    port: '587',
+    domain: 'smtp.gmail.com',
+    authentication: 'login',
+    user_name: '04kakerusiina17@gmail.com',
+    password: '417kakeru'
   }
 
 end
