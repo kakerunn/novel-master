@@ -40,7 +40,7 @@
        <div id="headerlink">
          <nav>
            <% if user_signed_in? %>
-              <strong><%= "-ようこそ、" + current_user.name + "さん!-"  %></strong>
+              <strong><%= "-ようこそ、" + current_user.name + "さん-"  %></strong>
                 <%= link_to 'Profile' , current_user , id: 'link' %>
                 <%= link_to 'Profile changes' , edit_user_registration_path , id: 'link' %>
                 <%= link_to 'Log out' , destroy_user_session_path ,  method: :delete %>
