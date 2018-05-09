@@ -45,7 +45,7 @@
                 <%= link_to 'Profile changes' , edit_user_registration_path , id: 'link' %>
                 <%= link_to 'Log out' , destroy_user_session_path ,  method: :delete %>
             <% else %>
-               <strong><%= "-ようこそ、ゲストさん-"  %></strong>
+               <strong><%= "-ようこそ、ゲストさん!-"  %></strong>
                 <%= link_to 'Sign up' , new_user_registration_path , id: 'link' %>
                 <%= link_to 'Log in' , new_user_session_path  %>
             <% end %>
